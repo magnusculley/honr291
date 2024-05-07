@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg0roo8lo4mbp"
-path="res://.godot/imported/Longwall.png-314b4094e33d374431a929267ae2a331.ctex"
+uid="uid://dd0ci8nf3ubr1"
+path="res://.godot/imported/right.png-b4c03d0271d4a32aaa9302d9d44f9a91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Longwall.png"
-dest_files=["res://.godot/imported/Longwall.png-314b4094e33d374431a929267ae2a331.ctex"]
+source_file="res://assets/wall/right.png"
+dest_files=["res://.godot/imported/right.png-b4c03d0271d4a32aaa9302d9d44f9a91.ctex"]
 
 [params]
 

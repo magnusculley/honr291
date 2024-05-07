@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd0ci8nf3ubr1"
-path="res://.godot/imported/right.png-58eb2791d49b1886c746c33e7d808c7a.ctex"
+uid="uid://db205nytrtad3"
+path="res://.godot/imported/Civilian1_Move.png-39e5c3f38015903b32e4d955253be15e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/right.png"
-dest_files=["res://.godot/imported/right.png-58eb2791d49b1886c746c33e7d808c7a.ctex"]
+source_file="res://assets/character/Civilian1_Move.png"
+dest_files=["res://.godot/imported/Civilian1_Move.png-39e5c3f38015903b32e4d955253be15e.ctex"]
 
 [params]
 
