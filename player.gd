@@ -20,6 +20,12 @@ func _physics_process(delta):
 		animate(velocity)
 	else:
 		sprite.animation="default"
+	#if Input.is_action_pressed("up"):
+		#if self.scale>Vector2(5.8,5.8):
+			#self.scale-=Vector2(.005,.005)
+	#if Input.is_action_pressed("down"):
+		#if self.scale<Vector2(6.2,6.2):
+			#self.scale+=Vector2(.005,.005)
 
 
 func animate(v):
@@ -39,10 +45,3 @@ func animate(v):
 		sprite.play("right")
 	elif v==Vector2(-SPEED,0):
 		sprite.play("left")
-	
-	#if Input.is_action_pressed("up"):
-		#if self.scale>Vector2(.8,.8):
-			#self.scale-=Vector2(.005,.005)
-	#elif Input.is_action_pressed("down"):
-		#if self.scale<Vector2(1.2,1.2):
-			#self.scale+=Vector2(.005,.005)

@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://gtxb7sdtxmne"]
+
+[ext_resource type="Texture2D" uid="uid://7sva0oi4uj0j" path="res://assets/wall/wooden-parquet-seamless-pattern-light-laminate-floor-top-view-realistic-vector-illustration_206049-2472.png" id="1_n4c8v"]
+
+[node name="Floor" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(313, 183.5)
+texture = ExtResource("1_n4c8v")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(939, 183.5)
+texture = ExtResource("1_n4c8v")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1565, 183.5)
+texture = ExtResource("1_n4c8v")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(2191, 183.5)
+texture = ExtResource("1_n4c8v")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(2817, 183.5)
+texture = ExtResource("1_n4c8v")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(3443, 183.5)
+texture = ExtResource("1_n4c8v")
