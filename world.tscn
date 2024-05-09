@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bf7bv0kuffhp7"]
+[gd_scene load_steps=6 format=3 uid="uid://bf7bv0kuffhp7"]
 
 [ext_resource type="PackedScene" uid="uid://gtxb7sdtxmne" path="res://floor.tscn" id="1_hh4e6"]
 [ext_resource type="PackedScene" uid="uid://bb7akge7hdikx" path="res://player.tscn" id="1_j4vig"]
 [ext_resource type="PackedScene" uid="uid://cralpv1wwxv6f" path="res://wall.tscn" id="2_yahp1"]
+[ext_resource type="PackedScene" uid="uid://c7i0h2qcldqiu" path="res://item.tscn" id="4_t0m4b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ioxu"]
 size = Vector2(19, 430)
@@ -31,3 +32,6 @@ position = Vector2(52, 33)
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 drag_horizontal_enabled = true
 drag_right_margin = 0.1
+
+[node name="Area2D" parent="." instance=ExtResource("4_t0m4b")]
+position = Vector2(1060, 155)
