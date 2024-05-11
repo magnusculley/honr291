@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://d03wi5il7afac" path="res://assets/wall/rudiment.medium.ttf" id="4_37pk8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h0rxr"]
-size = Vector2(3200, 20)
+size = Vector2(8959, 20)
 
 [node name="StaticBody2D" type="StaticBody2D"]
 
@@ -20,12 +20,24 @@ texture = ExtResource("1_tl6yg")
 position = Vector2(1600, -250)
 texture = ExtResource("2_15yhl")
 
+[node name="Sprite2D4" type="Sprite2D" parent="walls"]
+position = Vector2(3520, -250)
+texture = ExtResource("2_15yhl")
+
+[node name="Sprite2D5" type="Sprite2D" parent="walls"]
+position = Vector2(5440, -250)
+texture = ExtResource("2_15yhl")
+
+[node name="Sprite2D6" type="Sprite2D" parent="walls"]
+position = Vector2(7360, -250)
+texture = ExtResource("2_15yhl")
+
 [node name="Sprite2D3" type="Sprite2D" parent="walls"]
-position = Vector2(2880, -250)
+position = Vector2(8640, -250)
 texture = ExtResource("3_ncd7e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1600, -49)
+position = Vector2(4479.5, -49)
 shape = SubResource("RectangleShape2D_h0rxr")
 
 [node name="tags" type="Node" parent="."]

@@ -1,7 +1,9 @@
 extends Area2D
-var ttag = preload("res://tag.tscn")
-
+@export var id =0
+@onready var tag = $desc
 
 func _on_mouse_entered():
-	var tag = ttag.instantiate()
-	add_child(tag)
+	tag.visible=true
+
+func _on_mouse_exited():
+	tag.visible=false

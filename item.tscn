@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://c7i0h2qcldqiu"]
+[gd_scene load_steps=6 format=3 uid="uid://c7i0h2qcldqiu"]
 
 [ext_resource type="Texture2D" uid="uid://dxha4m4xof122" path="res://icon.svg" id="1_5mnir"]
 [ext_resource type="Script" path="res://item.gd" id="1_8tqws"]
+[ext_resource type="PackedScene" uid="uid://rft1fxnf64yd" path="res://desc.tscn" id="3_a0xhj"]
+[ext_resource type="Script" path="res://desc.gd" id="4_xxo2o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ox1uj"]
 size = Vector2(129, 129)
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_8tqws")
+id = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_5mnir")
@@ -16,4 +19,9 @@ texture = ExtResource("1_5mnir")
 position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_ox1uj")
 
+[node name="desc" parent="." instance=ExtResource("3_a0xhj")]
+visible = false
+script = ExtResource("4_xxo2o")
+
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
