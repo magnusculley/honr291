@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://rft1fxnf64yd"]
+[gd_scene load_steps=4 format=3 uid="uid://rft1fxnf64yd"]
 
+[ext_resource type="Script" path="res://stuff/desc.gd" id="1_38csr"]
 [ext_resource type="FontFile" uid="uid://d03wi5il7afac" path="res://assets/wall/rudiment.medium.ttf" id="1_g08ag"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_vuqym"]
@@ -7,6 +8,7 @@
 [node name="MarginContainer" type="MarginContainer"]
 offset_right = 100.0
 offset_bottom = 78.0
+script = ExtResource("1_38csr")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 2
@@ -22,7 +24,7 @@ theme_override_constants/margin_bottom = 5
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="title" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
@@ -33,7 +35,7 @@ custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 horizontal_scroll_mode = 0
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+[node name="desc" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)

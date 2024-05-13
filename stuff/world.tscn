@@ -1,11 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://bf7bv0kuffhp7"]
+[gd_scene load_steps=13 format=3 uid="uid://bf7bv0kuffhp7"]
 
 [ext_resource type="Script" path="res://stuff/Camera2D.gd" id="1_3ws7a"]
 [ext_resource type="PackedScene" uid="uid://gtxb7sdtxmne" path="res://stuff/floor.tscn" id="1_hh4e6"]
 [ext_resource type="PackedScene" uid="uid://bb7akge7hdikx" path="res://stuff/player.tscn" id="1_j4vig"]
 [ext_resource type="PackedScene" uid="uid://cralpv1wwxv6f" path="res://stuff/wall.tscn" id="2_yahp1"]
-[ext_resource type="PackedScene" uid="uid://c7i0h2qcldqiu" path="res://stuff/item.tscn" id="4_t0m4b"]
+[ext_resource type="PackedScene" uid="uid://cmlil5np5n4me" path="res://assets/items/steinbeck/money.tscn" id="4_rsfhb"]
 [ext_resource type="PackedScene" uid="uid://hd3xjwvdufbf" path="res://stuff/door.tscn" id="5_7k5bb"]
+[ext_resource type="PackedScene" uid="uid://os7ukesd1dud" path="res://assets/items/steinbeck/lilli.tscn" id="5_avh8e"]
+[ext_resource type="PackedScene" uid="uid://hsnomr2c1btf" path="res://assets/items/steinbeck/kamera.tscn" id="6_7jhqp"]
+[ext_resource type="PackedScene" uid="uid://jyogu6mxw364" path="res://assets/items/steinbeck/clock.tscn" id="7_l3jv3"]
+[ext_resource type="PackedScene" uid="uid://bjerntt02bfpy" path="res://stuff/door_2.tscn" id="10_d36up"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w3cy4"]
 size = Vector2(8960, 10)
@@ -47,11 +51,25 @@ shape = SubResource("RectangleShape2D_0ioxu")
 
 [node name="items" type="Node2D" parent="."]
 
-[node name="Area2D" parent="items" instance=ExtResource("4_t0m4b")]
-position = Vector2(1050, -24)
+[node name="Money" parent="items" instance=ExtResource("4_rsfhb")]
+position = Vector2(578, 10)
+
+[node name="Lilli" parent="items" instance=ExtResource("5_avh8e")]
+position = Vector2(1035, 13)
+
+[node name="Kamera" parent="items" instance=ExtResource("6_7jhqp")]
+position = Vector2(574, 440)
+
+[node name="Clock" parent="items" instance=ExtResource("7_l3jv3")]
+position = Vector2(1049, 440)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_j4vig")]
 position = Vector2(52, 33)
 
-[node name="Door" parent="." instance=ExtResource("5_7k5bb")]
-position = Vector2(749, 132)
+[node name="doors" type="Node2D" parent="."]
+
+[node name="Door" parent="doors" instance=ExtResource("5_7k5bb")]
+position = Vector2(1406, 193)
+
+[node name="Door2" parent="doors" instance=ExtResource("10_d36up")]
+position = Vector2(820, 182)

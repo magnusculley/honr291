@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://os7ukesd1dud"]
+
+[ext_resource type="Script" path="res://stuff/item.gd" id="1_b2244"]
+[ext_resource type="Texture2D" uid="uid://dxha4m4xof122" path="res://stuff/icon.svg" id="2_wh4rt"]
+[ext_resource type="PackedScene" uid="uid://rft1fxnf64yd" path="res://stuff/desc.tscn" id="3_2omox"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ne2yx"]
+size = Vector2(129, 129)
+
+[node name="Lilli" type="Area2D"]
+script = ExtResource("1_b2244")
+id = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_wh4rt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_ne2yx")
+
+[node name="desc" parent="." instance=ExtResource("3_2omox")]
+visible = false
+z_index = 1
+script = null
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmv2h708cqd7y"]
+[gd_scene load_steps=4 format=3 uid="uid://dmv2h708cqd7y"]
 
 [ext_resource type="Script" path="res://stuff/puzzle.gd" id="1_8scty"]
 [ext_resource type="Texture2D" uid="uid://dxha4m4xof122" path="res://stuff/icon.svg" id="1_c5oe3"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_kqwag"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5yfs1"]
 bg_color = Color(0, 0.717647, 0.352941, 1)
@@ -14,9 +12,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_8scty")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
+[node name="NinePatchRect" type="Panel" parent="."]
 layout_mode = 2
-texture = SubResource("CanvasTexture_kqwag")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
