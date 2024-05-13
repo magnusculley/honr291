@@ -1,0 +1,118 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmv2h708cqd7y"]
+
+[ext_resource type="Script" path="res://stuff/puzzle.gd" id="1_8scty"]
+[ext_resource type="Texture2D" uid="uid://dxha4m4xof122" path="res://stuff/icon.svg" id="1_c5oe3"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_kqwag"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5yfs1"]
+bg_color = Color(0, 0.717647, 0.352941, 1)
+
+[node name="MarginContainer" type="MarginContainer"]
+scale = Vector2(2, 2)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_8scty")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = SubResource("CanvasTexture_kqwag")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 3
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5yfs1")
+toggle_mode = true
+icon = ExtResource("1_c5oe3")
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5yfs1")
+toggle_mode = true
+icon = ExtResource("1_c5oe3")
+icon_alignment = 1
+
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5yfs1")
+toggle_mode = true
+icon = ExtResource("1_c5oe3")
+icon_alignment = 1
+
+[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5yfs1")
+toggle_mode = true
+icon = ExtResource("1_c5oe3")
+icon_alignment = 1
+
+[node name="Button5" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5yfs1")
+toggle_mode = true
+icon = ExtResource("1_c5oe3")
+icon_alignment = 1
+
+[node name="Button6" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5yfs1")
+toggle_mode = true
+icon = ExtResource("1_c5oe3")
+icon_alignment = 1
+
+[node name="Button7" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5yfs1")
+toggle_mode = true
+icon = ExtResource("1_c5oe3")
+icon_alignment = 1
+
+[node name="Button8" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5yfs1")
+toggle_mode = true
+icon = ExtResource("1_c5oe3")
+icon_alignment = 1
+
+[node name="Button9" type="Button" parent="MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5yfs1")
+toggle_mode = true
+icon = ExtResource("1_c5oe3")
+icon_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Exit"
+expand_icon = true
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Enter"
+expand_icon = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="_on_enter_pressed"]

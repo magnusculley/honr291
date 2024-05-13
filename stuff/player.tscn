@@ -1,6 +1,6 @@
 [gd_scene load_steps=39 format=3 uid="uid://bb7akge7hdikx"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_7ofdp"]
+[ext_resource type="Script" path="res://stuff/player.gd" id="1_7ofdp"]
 [ext_resource type="Texture2D" uid="uid://db205nytrtad3" path="res://assets/character/Civilian1_Move.png" id="2_ikdyp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lq8bc"]
