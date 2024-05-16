@@ -4,6 +4,10 @@ extends Area2D
 
 func _on_mouse_entered():
 	tag.visible=true
+	if id == 6 or id == 7:
+		$pic.visible=true
 
 func _on_mouse_exited():
 	tag.visible=false
+	if id == 6 or id == 7:
+		$pic.visible=false

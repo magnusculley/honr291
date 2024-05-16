@@ -1,18 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjws4r24ej0wc"]
+[gd_scene load_steps=7 format=3 uid="uid://cjws4r24ej0wc"]
 
 [ext_resource type="Script" path="res://stuff/item.gd" id="1_wynyc"]
-[ext_resource type="Texture2D" uid="uid://dxha4m4xof122" path="res://stuff/icon.svg" id="2_7ht1a"]
+[ext_resource type="PackedScene" uid="uid://cf7381uhjjm0f" path="res://assets/items/pedestal.tscn" id="2_lo3tr"]
+[ext_resource type="Texture2D" uid="uid://bojgcuuqrxsih" path="res://assets/items/schind/2d92b29a-e463-407e-99f4-9c64adf33498_subscription-key=5df21f2e4596490bb9b0430ca2c67277.png" id="3_03vet"]
 [ext_resource type="PackedScene" uid="uid://rft1fxnf64yd" path="res://stuff/desc.tscn" id="3_n4qdg"]
+[ext_resource type="PackedScene" uid="uid://ct7g6shiinunq" path="res://assets/items/schind/enekel.tscn" id="5_01hy6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ne2yx"]
 size = Vector2(129, 129)
 
 [node name="Enamel" type="Area2D"]
 script = ExtResource("1_wynyc")
-id = 1
+id = 7
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_lo3tr")]
+position = Vector2(-3, 60)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_7ht1a")
+texture = ExtResource("3_03vet")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -0.5)
@@ -21,7 +26,15 @@ shape = SubResource("RectangleShape2D_ne2yx")
 [node name="desc" parent="." instance=ExtResource("3_n4qdg")]
 visible = false
 z_index = 1
-script = null
+offset_left = 15.0
+offset_right = 207.0
+
+[node name="pic" parent="." instance=ExtResource("5_01hy6")]
+visible = false
+offset_left = -336.0
+offset_top = -254.0
+offset_right = -336.0
+offset_bottom = -254.0
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

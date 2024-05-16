@@ -1,0 +1,79 @@
+[gd_scene load_steps=9 format=3 uid="uid://cno4i6n8fy6bx"]
+
+[ext_resource type="Script" path="res://stuff/item.gd" id="1_oy3jq"]
+[ext_resource type="PackedScene" uid="uid://cf7381uhjjm0f" path="res://assets/items/pedestal.tscn" id="2_6t2wr"]
+[ext_resource type="Texture2D" uid="uid://dnawshvy66pw8" path="res://assets/items/vonnegut/Edgar-L.-Strauss-WWII-Draft-Card.jpg" id="3_2dbxi"]
+[ext_resource type="PackedScene" uid="uid://rft1fxnf64yd" path="res://stuff/desc.tscn" id="4_8tppc"]
+[ext_resource type="Script" path="res://assets/items/vonnegut/draft.gd" id="6_47hj2"]
+[ext_resource type="Script" path="res://assets/items/vonnegut/adada.gd" id="6_g3f2f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ne2yx"]
+size = Vector2(129, 129)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_baic1"]
+size = Vector2(162, 208)
+
+[node name="Draft" type="Area2D"]
+script = ExtResource("1_oy3jq")
+id = 8
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_6t2wr")]
+position = Vector2(-2, 83)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_2dbxi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_ne2yx")
+
+[node name="desc" parent="." instance=ExtResource("4_8tppc")]
+visible = false
+z_index = 1
+offset_left = -2.0
+offset_top = -69.0
+offset_right = 190.0
+offset_bottom = 149.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+offset_left = -341.0
+offset_top = -174.0
+offset_right = -35.0
+offset_bottom = -25.0
+script = ExtResource("6_g3f2f")
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Take It"
+
+[node name="Button2" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Burn It"
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("6_47hj2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 35)
+shape = SubResource("RectangleShape2D_baic1")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/HBoxContainer/Button" to="MarginContainer" method="_on_button_pressed"]
+[connection signal="input_event" from="Area2D" to="Area2D" method="_on_input_event"]

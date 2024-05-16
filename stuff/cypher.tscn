@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnrgdrikdulhg"]
+[gd_scene load_steps=6 format=3 uid="uid://cnrgdrikdulhg"]
 
 [ext_resource type="Script" path="res://stuff/cypher.gd" id="1_xnw6d"]
-[ext_resource type="Texture2D" uid="uid://dxha4m4xof122" path="res://stuff/icon.svg" id="2_gdgih"]
+[ext_resource type="Texture2D" uid="uid://d31p2x2fstysi" path="res://assets/items/schind/red-pea-coat-260nw-261724019.png" id="2_o33pu"]
+[ext_resource type="Texture2D" uid="uid://dkahfas5upr1a" path="res://assets/items/schind/arrow.png" id="3_54sua"]
+[ext_resource type="Texture2D" uid="uid://bojgcuuqrxsih" path="res://assets/items/schind/2d92b29a-e463-407e-99f4-9c64adf33498_subscription-key=5df21f2e4596490bb9b0430ca2c67277.png" id="4_b1nvn"]
+[ext_resource type="Texture2D" uid="uid://bg2v1ivkt1qek" path="res://assets/items/schind/list.png" id="5_vc2pq"]
 
 [node name="MarginContainer" type="MarginContainer"]
+z_index = 1
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(2, 2)
@@ -28,15 +32,28 @@ theme_override_constants/separation = 10
 
 [node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_gdgih")
+texture = ExtResource("2_o33pu")
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_54sua")
 
 [node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_gdgih")
+texture = ExtResource("5_vc2pq")
+
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_54sua")
 
 [node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_gdgih")
+texture = ExtResource("4_b1nvn")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "VLOHHFCNT"
+horizontal_alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

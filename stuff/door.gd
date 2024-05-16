@@ -11,4 +11,4 @@ func _on_input_event(viewport, event, shape_idx):
 			if id==1:
 				puzzle.global_position = camera.global_position-Vector2(200,470)
 			elif id==2:
-				puzzle.global_position = camera.global_position-Vector2(200,270)
+				puzzle.global_position = camera.global_position-Vector2(400,270)

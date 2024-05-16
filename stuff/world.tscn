@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bf7bv0kuffhp7"]
+[gd_scene load_steps=17 format=3 uid="uid://bf7bv0kuffhp7"]
 
 [ext_resource type="Script" path="res://stuff/Camera2D.gd" id="1_3ws7a"]
 [ext_resource type="PackedScene" uid="uid://gtxb7sdtxmne" path="res://stuff/floor.tscn" id="1_hh4e6"]
@@ -10,6 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://hsnomr2c1btf" path="res://assets/items/steinbeck/kamera.tscn" id="6_7jhqp"]
 [ext_resource type="PackedScene" uid="uid://jyogu6mxw364" path="res://assets/items/steinbeck/clock.tscn" id="7_l3jv3"]
 [ext_resource type="PackedScene" uid="uid://bjerntt02bfpy" path="res://stuff/door_2.tscn" id="10_d36up"]
+[ext_resource type="PackedScene" uid="uid://cjws4r24ej0wc" path="res://assets/items/schind/enamel.tscn" id="11_dfspq"]
+[ext_resource type="PackedScene" uid="uid://cjpgbx24epunb" path="res://assets/items/schind/list.tscn" id="12_s8ofy"]
+[ext_resource type="PackedScene" uid="uid://ddha8ow6f3q1a" path="res://assets/items/schind/red.tscn" id="13_cvl0c"]
+[ext_resource type="PackedScene" uid="uid://cno4i6n8fy6bx" path="res://assets/items/vonnegut/draft.tscn" id="14_j4xrk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w3cy4"]
 size = Vector2(8960, 10)
@@ -49,6 +53,9 @@ shape = SubResource("RectangleShape2D_0ioxu")
 
 [node name="Floor" parent="flloro" instance=ExtResource("1_hh4e6")]
 
+[node name="Floor2" parent="flloro" instance=ExtResource("1_hh4e6")]
+position = Vector2(7512, 0)
+
 [node name="items" type="Node2D" parent="."]
 
 [node name="Money" parent="items" instance=ExtResource("4_rsfhb")]
@@ -72,4 +79,24 @@ position = Vector2(52, 33)
 position = Vector2(1499, 185)
 
 [node name="Door2" parent="doors" instance=ExtResource("10_d36up")]
-position = Vector2(3221, 188)
+position = Vector2(4331, 192)
+
+[node name="Enamel" parent="." instance=ExtResource("11_dfspq")]
+position = Vector2(3385, -29)
+
+[node name="List" parent="." instance=ExtResource("12_s8ofy")]
+position = Vector2(3042, 246)
+
+[node name="Red" parent="." instance=ExtResource("13_cvl0c")]
+position = Vector2(3733, 234)
+
+[node name="Draft" parent="." instance=ExtResource("14_j4xrk")]
+position = Vector2(5242, 129)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 6674.0
+offset_top = -242.0
+offset_right = 6852.0
+offset_bottom = -187.0
+theme_override_font_sizes/font_size = 40
+text = "so it goes"
