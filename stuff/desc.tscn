@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://rft1fxnf64yd"]
+[gd_scene load_steps=3 format=3 uid="uid://rft1fxnf64yd"]
 
 [ext_resource type="Script" path="res://stuff/desc.gd" id="1_38csr"]
-[ext_resource type="FontFile" uid="uid://d03wi5il7afac" path="res://assets/wall/rudiment.medium.ttf" id="1_g08ag"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_vuqym"]
 
 [node name="MarginContainer" type="MarginContainer"]
-offset_right = 100.0
-offset_bottom = 78.0
+offset_left = -40.0
+offset_top = -70.0
+offset_right = 152.0
+offset_bottom = 148.0
 script = ExtResource("1_38csr")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
@@ -27,19 +28,19 @@ layout_mode = 2
 [node name="title" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "title"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
 [node name="desc" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer"]
-custom_minimum_size = Vector2(80, 0)
+custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_g08ag")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 20
 text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
-autowrap_mode = 1
+autowrap_mode = 2

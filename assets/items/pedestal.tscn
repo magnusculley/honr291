@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf7381uhjjm0f"]
+
+[ext_resource type="Texture2D" uid="uid://dwuy6uo0afanc" path="res://assets/items/pedestal.png" id="1_cupln"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dl23w"]
+size = Vector2(32, 24)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+scale = Vector2(4, 4)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cupln")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_dl23w")

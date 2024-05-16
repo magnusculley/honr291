@@ -4,7 +4,6 @@ const SPEED = 300.0
 @onready var sprite = $AnimatedSprite2D
 
 func _physics_process(delta):
-
 	var direction = Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * SPEED

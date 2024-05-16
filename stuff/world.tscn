@@ -52,16 +52,16 @@ shape = SubResource("RectangleShape2D_0ioxu")
 [node name="items" type="Node2D" parent="."]
 
 [node name="Money" parent="items" instance=ExtResource("4_rsfhb")]
-position = Vector2(578, 10)
+position = Vector2(591, -54)
 
 [node name="Lilli" parent="items" instance=ExtResource("5_avh8e")]
-position = Vector2(1035, 13)
+position = Vector2(1038, -59)
 
 [node name="Kamera" parent="items" instance=ExtResource("6_7jhqp")]
-position = Vector2(574, 440)
+position = Vector2(599, 264)
 
 [node name="Clock" parent="items" instance=ExtResource("7_l3jv3")]
-position = Vector2(1049, 440)
+position = Vector2(1051, 230)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_j4vig")]
 position = Vector2(52, 33)
@@ -69,7 +69,7 @@ position = Vector2(52, 33)
 [node name="doors" type="Node2D" parent="."]
 
 [node name="Door" parent="doors" instance=ExtResource("5_7k5bb")]
-position = Vector2(1406, 193)
+position = Vector2(1499, 185)
 
 [node name="Door2" parent="doors" instance=ExtResource("10_d36up")]
-position = Vector2(820, 182)
+position = Vector2(3221, 188)

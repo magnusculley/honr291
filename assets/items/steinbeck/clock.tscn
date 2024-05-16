@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://jyogu6mxw364"]
+[gd_scene load_steps=6 format=3 uid="uid://jyogu6mxw364"]
 
 [ext_resource type="Script" path="res://stuff/item.gd" id="1_hnyf4"]
-[ext_resource type="Texture2D" uid="uid://dxha4m4xof122" path="res://stuff/icon.svg" id="2_e3qom"]
+[ext_resource type="Texture2D" uid="uid://dfpfbv4eyw07p" path="res://assets/items/steinbeck/clock.png" id="2_1ufkc"]
+[ext_resource type="PackedScene" uid="uid://cf7381uhjjm0f" path="res://assets/items/pedestal.tscn" id="2_2sno6"]
 [ext_resource type="PackedScene" uid="uid://rft1fxnf64yd" path="res://stuff/desc.tscn" id="3_yv2pl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ne2yx"]
@@ -11,8 +12,13 @@ size = Vector2(129, 129)
 script = ExtResource("1_hnyf4")
 id = 2
 
+[node name="StaticBody2D" parent="." instance=ExtResource("2_2sno6")]
+position = Vector2(-3, 88)
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_e3qom")
+position = Vector2(2.50001, -0.499985)
+scale = Vector2(0.0828125, 0.0828125)
+texture = ExtResource("2_1ufkc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -0.5)
@@ -21,7 +27,6 @@ shape = SubResource("RectangleShape2D_ne2yx")
 [node name="desc" parent="." instance=ExtResource("3_yv2pl")]
 visible = false
 z_index = 1
-script = null
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

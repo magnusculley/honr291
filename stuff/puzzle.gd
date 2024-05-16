@@ -9,7 +9,7 @@ func alloff():
 		button.button_pressed=false
 
 func checkwin():
-	if(buttons[0].button_pressed==true and buttons[1].button_pressed==true and buttons[2].button_pressed==true and buttons[3].button_pressed==true and buttons[4].button_pressed==false and buttons[5].button_pressed==false and buttons[6].button_pressed==false and buttons[7].button_pressed==false and buttons[8].button_pressed==false):
+	if(buttons[0].button_pressed==false and buttons[1].button_pressed==false and buttons[2].button_pressed==true and buttons[3].button_pressed==true and buttons[4].button_pressed==false and buttons[5].button_pressed==false and buttons[6].button_pressed==false and buttons[7].button_pressed==true and buttons[8].button_pressed==true):	
 		return true
 
 func _on_exit_pressed():

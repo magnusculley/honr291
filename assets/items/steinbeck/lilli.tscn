@@ -1,27 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://os7ukesd1dud"]
+[gd_scene load_steps=6 format=3 uid="uid://os7ukesd1dud"]
 
 [ext_resource type="Script" path="res://stuff/item.gd" id="1_b2244"]
-[ext_resource type="Texture2D" uid="uid://dxha4m4xof122" path="res://stuff/icon.svg" id="2_wh4rt"]
+[ext_resource type="PackedScene" uid="uid://cf7381uhjjm0f" path="res://assets/items/pedestal.tscn" id="2_puw27"]
 [ext_resource type="PackedScene" uid="uid://rft1fxnf64yd" path="res://stuff/desc.tscn" id="3_2omox"]
+[ext_resource type="Texture2D" uid="uid://6bqvt5d02hgh" path="res://assets/items/steinbeck/militaryradio-1.png" id="3_5cxw4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ne2yx"]
-size = Vector2(129, 129)
+size = Vector2(198.5, 129)
 
 [node name="Lilli" type="Area2D"]
+position = Vector2(3, 2)
 script = ExtResource("1_b2244")
 id = 3
 
+[node name="StaticBody2D" parent="." instance=ExtResource("2_puw27")]
+position = Vector2(-2, 78)
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_wh4rt")
+position = Vector2(2.99997, 6.99997)
+scale = Vector2(0.176035, 0.176035)
+texture = ExtResource("3_5cxw4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -0.5)
+position = Vector2(-3, 15)
 shape = SubResource("RectangleShape2D_ne2yx")
 
 [node name="desc" parent="." instance=ExtResource("3_2omox")]
 visible = false
 z_index = 1
-script = null
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
